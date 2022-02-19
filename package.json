@@ -1,0 +1,31 @@
+{
+  "name": "tidu",
+  "version": "1.0.0",
+  "description": "A todo app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aryan-debug/Tidu.git"
+  },
+  "author": "Aryan Arora",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aryan-debug/Tidu/issues"
+  },
+  "homepage": "https://github.com/aryan-debug/Tidu#readme",
+  "devDependencies": {
+    "css-loader": "^6.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "date-fns": "^2.28.0",
+    "moment": "^2.29.1"
+  }
+}
