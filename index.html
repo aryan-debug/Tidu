@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidu</title>
+    <script src="https://kit.fontawesome.com/4e4cebd824.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="style.css">
+>>>>>>> 1e2634b (initial commit)
+</head>
+<body>
+    <header>
+        <h2>Tidu</h2>
+        <div class="search-wrapper">
+            <i class="fas fa-search" id = "search-icon"></i>
+            <input type="text" id = "search-box">
+        </div>
+    </header>
+    <main>
+<<<<<<< HEAD
+        <h1 id = "heading">Today</h1>
+        <div id="main-content">
+            <div id="sidebar">
+                <div class="sidebar-btn tab-active" id = "today-btn"><i class="fas fa-calendar-day"></i>Today</div>
+                <div class="sidebar-btn" id = "week-btn"><i class="fas fa-calendar-week"></i>Week</div>
+                <div class="sidebar-btn" id = "month-btn"><i class="fas fa-calendar-alt"></i>Month</div>
+                <div class="sidebar-btn" id = "project-btn"><i class="fas fa-tasks"></i>Projects</div>
+            </div>
+            <div id="content">
+            </div>
+        </div>
+    </main>
+    <div class = "modal-content inactive" id = "add-task-content">
+        <form id = "add-task-form" class = "form">
+=======
+        <h1>Tasks</h1>
+        <div id="main-content">
+            <div id="sidebar">
+                <div class="sidebar-btn tab-active"><i class="fas fa-calendar-day"></i>Today</div>
+                <div class="sidebar-btn"><i class="fas fa-calendar-week"></i>Week</div>
+                <div class="sidebar-btn"><i class="fas fa-calendar-alt"></i>Month</div>
+                <div class="sidebar-btn"><i class="fas fa-tasks"></i>Projects</div>
+            </div>
+            <div id="tasks">
+                <div class = "task-card red">
+                    <div class = "card-top">
+                        <h2>Study</h2>
+                        <i class="fas fa-cog setting-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="description">
+                            <i class="fas fa-pen"></i>
+                            Prepa
+                        </div>
+                        <div class="due-time">
+                            <i class="fas fa-clock"></i>
+                            10:00 21 Feb. 2022
+                        </div>
+                    </div>
+                    <div class="done-btn">Done</div>
+                </div>
+                <div class = "task-card yellow">
+                    <div class = "card-top">
+                        <h2>Play</h2>
+                        <i class="fas fa-cog setting-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="description">
+                            <i class="fas fa-pen"></i>
+                            Go outside and play cricket
+                        </div>
+                        <div class="due-time">
+                            <i class="fas fa-clock"></i>
+                            10:00 21 Feb. 2022
+                        </div>
+                    </div>
+                    <div class="done-btn">Done</div>
+                </div>
+                <div class = "task-card  green">
+                    <div class = "card-top">
+                        <h2>Program</h2>
+                        <i class="fas fa-cog setting-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="description">
+                            <i class="fas fa-pen"></i>
+                            work on my web-dev project
+                        </div>
+                        <div class="due-time">
+                            <i class="fas fa-clock"></i>
+                            10:00 21 Feb. 2022
+                        </div>
+                    </div>
+                    <div class="done-btn">Done</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="add-btn">+</div>
+    <div class = "inactive" id = "modal-content">
+        <form id = "add-task-form">
+>>>>>>> 1e2634b (initial commit)
+            <h1 id = "add-task-heading">Add task</h1>
+            <input type="text" placeholder="Title" autocomplete="off" class="input-box" required>
+            <input type="text" placeholder="Description" autocomplete="off" class="input-box">
+            <input type="datetime-local" autocomplete="off" class="input-box date-box" required>
+            <div id = "priority">
+                <h2>Priority</h2>
+                <label class = "radio-container">
+                    <input type="radio" name = "priority-btn" required>
+                    <span class = "red-color circle"></span>
+                </label>
+                <label class = "radio-container">
+                    <input type="radio" name = "priority-btn">
+                    <span class = "yellow-color circle"></span>
+                </label>
+                <label class = "radio-container">
+                    <input type="radio" name = "priority-btn">
+                    <span class = "green-color circle"></span>
+                </label>
+            </div>
+            <button type="submit" id = "add-task-btn">Add</button>
+        </form>
+<<<<<<< HEAD
+    </div>
+    <div class = "modal-content inactive" id = "add-project-container">
+        <form id = "add-project-form" class = "form">
+            <h1 id = "add-project-heading">Add Project</h1>
+            <input type="text" placeholder="Title" autocomplete="off" class="input-box" required>
+            <input type="text" placeholder="Description" autocomplete="off" class="input-box">
+            <input type="datetime-local" autocomplete="off" class="input-box date-box" required>
+            <button type="submit" id = "add-project-btn">Add</button>
+        </form>
+    </div>
+    <div class = "modal-content inactive" id = "edit-task-content">
+        <form id = "edit-task-form" class = "form">
+            <h1 id = "edit-task-heading">Edit task</h1>
+            <input type="text" placeholder="Title" autocomplete="off" class="input-box">
+            <input type="text" placeholder="Description" autocomplete="off" class="input-box">
+            <input type="datetime-local" autocomplete="off" class="input-box date-box">
+            <div id = "priority">
+                <h2>Priority</h2>
+                <label class = "radio-container">
+                    <input type="radio" name = "priority-btn">
+                    <span class = "red-color circle"></span>
+                </label>
+                <label class = "radio-container">
+                    <input type="radio" name = "priority-btn">
+                    <span class = "yellow-color circle"></span>
+                </label>
+                <label class = "radio-container">
+                    <input type="radio" name = "priority-btn">
+                    <span class = "green-color circle"></span>
+                </label>
+            </div>
+            <button type="submit" id = "edit-task-btn">Edit</button>
+        </form>
+    </div>
+    <div id="add-btn">&plus;</div>
+=======
+    </div>  
+>>>>>>> 1e2634b (initial commit)
+    <div id="overlay"></div>
+</body>
+</html>
