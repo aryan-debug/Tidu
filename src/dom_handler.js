@@ -21,7 +21,7 @@ export class Task_handler {
         const desc_text = document.createTextNode(data._description);
         const time_text = document.createTextNode(format_date(data._due_date));
         done_btn.addEventListener("click", () => publish("done_btn_clicked", data._id));
-        setting_icon.addEventListener("click", () => publish("edit_task_btn_clicked", data._id) );
+        setting_icon.addEventListener("click", () => { publish("edit_task_btn_clicked", data._id); });
         due_time.append(clock_icon)
         due_time.append(time_text);
         task_card.setAttribute("data-id", data._id);

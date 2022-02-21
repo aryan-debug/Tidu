@@ -1,4 +1,4 @@
-import { publish, subscribe } from "./pubsub";
+import { publish, subscribe, subscribers, unpublish } from "./pubsub";
 import { close_overlay } from "./events";
 import { get_unique_id } from "./helpers";
 import { get_tasks_from_project, get_task_from_current_project } from "./storage";
@@ -34,6 +34,7 @@ function fill_placeholder(data) {
         form_elements[i].placeholder = form_data[i];
     };
     form_elements[3 + form_data[form_data.length - 1]].checked = true;
+    return;
 }
 function handle_edit_task_form(evt, task_id) {
     evt.preventDefault();
@@ -43,7 +44,7 @@ function handle_edit_task_form(evt, task_id) {
         if (form_elements[i - 1].value) {
             old_data[i] = form_elements[i - 1].value;
         }
-    }
+    }   
     let priority = -1;
     for (let i = 3; i < 6; i++) {
         if (form_elements[i].checked) {
@@ -53,6 +54,7 @@ function handle_edit_task_form(evt, task_id) {
     old_data[old_data.length - 1] = priority;
     publish("edit_form_submitted", old_data);
     close_overlay();
+    return;
 }
 const add_form = document.getElementById("add-task-form")
 const add_project_form = document.getElementById("add-project-form")
@@ -61,5 +63,5 @@ add_form.addEventListener("submit", handle_add_form);
 add_project_form.addEventListener("submit", handle_create_new_project_form);
 subscribe("edit_task_btn_clicked", (data) => {
     fill_placeholder(data);
-    edit_task_form.addEventListener("submit", (evt) => { handle_edit_task_form(evt, data) })
+    edit_task_form.addEventListener("submit", (evt) => { handle_edit_task_form(evt, data) }, {once: true})
 });
